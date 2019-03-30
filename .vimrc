@@ -12,6 +12,8 @@ Plug 'rust-lang/rust.vim'
 Plug 'fatih/vim-go'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'valloric/youcompleteme'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 call plug#end()
 "Plugin init end()
 
