@@ -30,5 +30,5 @@ let g:cpp_member_variable_highlight = 1
 let g:cpp_class_scope_highlight = 1
 let $FZF_DEFAULT_COMMAND = "find -L"
 noremap <C-C> <esc>
-cnoremap <C-C> <esc> 
-
+cnoremap <C-C> <esc>
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
