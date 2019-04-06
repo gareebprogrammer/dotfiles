@@ -85,7 +85,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -116,6 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 # My export's #
 export dev=/mnt/dev
 
@@ -133,6 +135,3 @@ export GOBIN=/mnt/dev/gocode/bin
 export PATH=$PATH:/mnt/dev/gocode/bin
 
 
-
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash

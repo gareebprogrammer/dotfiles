@@ -18,7 +18,18 @@ call plug#end()
 "Plugin init end()
 
 set background=dark 
-colorscheme gruvbox
+
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
+"Search highlight
+set hlsearch
+
+"colorscheme gruvbox
 let g:rustfmt_autosave = 1
 nnoremap <silent> <C-p> :FZF<CR>
 map <F3> :NERDTreeToggle<CR>
