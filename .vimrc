@@ -2,7 +2,6 @@
 
 "Plugin init start()
 call plug#begin('~/.vim/plugged')
-Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'scrooloose/nerdtree'
 Plug 'bling/vim-airline'
