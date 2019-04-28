@@ -13,6 +13,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'valloric/youcompleteme'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'morhetz/gruvbox'
 call plug#end()
 "Plugin init end()
 
@@ -28,7 +29,7 @@ set expandtab
 "Search highlight
 set hlsearch
 
-"colorscheme gruvbox
+colorscheme gruvbox
 let g:rustfmt_autosave = 1
 nnoremap <silent> <C-p> :FZF<CR>
 map <F3> :NERDTreeToggle<CR>
@@ -41,4 +42,5 @@ let g:cpp_class_scope_highlight = 1
 let $FZF_DEFAULT_COMMAND = "find -L"
 noremap <C-C> <esc>
 cnoremap <C-C> <esc>
+let g:AutoClosePreserveDotReg = 0
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
