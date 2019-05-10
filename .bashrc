@@ -116,8 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 # My export's #
 export dev=/mnt/dev
 
@@ -135,3 +133,5 @@ export GOBIN=/mnt/dev/gocode/bin
 export PATH=$PATH:/mnt/dev/gocode/bin
 
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
