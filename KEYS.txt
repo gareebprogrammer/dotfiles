@@ -1,0 +1,47 @@
+ALT-B         Switch to buffer in the current window
+ALT-SHIFT-B   Switch to buffer in the other window
+
+ALT-F         Load file in current window
+ALT-SHIFT-F   Load file in other window
+
+ALT-S         Save the file the current window
+ALT-M         Looks for a build file and executes it
+ALT-R         Revert buffer
+
+ALT-W         Switch ti the other buffer
+
+ALT-C         Toggles between h file in cpp file
+ALT-SHIFT-C   Toggles between h file in cpp file in other window
+
+ALT-K         Kills a buffer with confirmation
+
+CTRL=SPACE    Sets the mark
+CTRL-TAB      Reindent block
+CTRL-Q        Copies the block
+CTRL-F        Pastes the block
+CTRL-W        Cuts the block
+
+
+ALT-U         Undo
+ALT-SHIFT-;   Pops back to the previous mark
+
+CTRL-S        Start incremental search
+    CTRL-S    Move to next occurrence
+    CTRL-R    Move to previous occurrence
+
+ALT-O         Queary replace
+ALT-L         Replace inside a marked region
+
+ALT-[         Start recording keyboard macro
+ALT-]         Stop recording keyboard macro
+ALT-'         Replay keyboard macro
+
+TAB           Cycles through completion
+
+
+ALT-G         Goto line number
+
+ALT-N         Goto next error after compilation
+ALT-SHIFT-N   Goto previous error after compilation
+
+
