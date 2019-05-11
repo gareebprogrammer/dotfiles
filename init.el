@@ -1,10 +1,3 @@
-; This is my super-poopy .emacs file.
-; I barely know how to program LISP, and I know
-; even less about ELISP.  So take everything in
-; this file with a grain of salt!
-;
-; - Casey
-
 ; Stop Emacs from losing undo information by
 ; setting very high limits for undo buffers
 (setq undo-limit 20000000)
@@ -14,9 +7,6 @@
 (setq casey-aquamacs (featurep 'aquamacs))
 (setq casey-linux (featurep 'x))
 (setq casey-win32 (not (or casey-aquamacs casey-linux)))
-
-(setq casey-todo-file "w:/handmade/code/todo.txt")
-(setq casey-log-file "w:/handmade/code/log.txt")
 
 (global-hl-line-mode 1)
 (set-face-background 'hl-line "midnight blue")
@@ -49,7 +39,7 @@
 )
 
 (when casey-linux
-  (setq casey-makescript "./build.linux")
+  (setq casey-makescript "./build.sh")
   (display-battery-mode 1)
 )
 
@@ -237,8 +227,8 @@
      (insert "   $File: $\n")
      (insert "   $Date: $\n")
      (insert "   $Revision: $\n")
-     (insert "   $Creator: Casey Muratori $\n")
-     (insert "   $Notice: (C) Copyright 2014 by Molly Rocket, Inc. All Rights Reserved. $\n")
+     (insert "   $Creator: gareebprogrammer $\n")
+     (insert "   $License: MIT $\n")
      (insert "   ======================================================================== */\n")
      (insert "\n")
      (insert "#define ")
@@ -258,8 +248,8 @@
      (insert "   $File: $\n")
      (insert "   $Date: $\n")
      (insert "   $Revision: $\n")
-     (insert "   $Creator: Casey Muratori $\n")
-     (insert "   $Notice: (C) Copyright 2014 by Molly Rocket, Inc. All Rights Reserved. $\n")
+     (insert "   $Creator: gareebprogrammer $\n")
+     (insert "   $License: MIT $\n")
      (insert "   ======================================================================== */\n")
   )
 
@@ -568,8 +558,8 @@
     nil)
 (setq split-window-preferred-function 'casey-never-split-a-window)
 
-(add-to-list 'default-frame-alist '(font . "Liberation Mono-11.5"))
-(set-face-attribute 'default t :font "Liberation Mono-11.5")
+(add-to-list 'default-frame-alist '(font . "Liberation Mono-12.6"))
+(set-face-attribute 'default t :font "Liberation Mono-14")
 (set-face-attribute 'font-lock-builtin-face nil :foreground "#DAB98F")
 (set-face-attribute 'font-lock-comment-face nil :foreground "gray50")
 (set-face-attribute 'font-lock-constant-face nil :foreground "olive drab")
