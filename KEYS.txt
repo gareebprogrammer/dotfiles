@@ -8,14 +8,14 @@ ALT-S         Save the file the current window
 ALT-M         Looks for a build file and executes it
 ALT-R         Revert buffer
 
-ALT-W         Switch ti the other buffer
+ALT-W         Switch to the other buffer
 
 ALT-C         Toggles between h file in cpp file
 ALT-SHIFT-C   Toggles between h file in cpp file in other window
 
 ALT-K         Kills a buffer with confirmation
 
-CTRL=SPACE    Sets the mark
+CTRL-SPACE    Sets the mark
 CTRL-TAB      Reindent block
 CTRL-Q        Copies the block
 CTRL-F        Pastes the block
