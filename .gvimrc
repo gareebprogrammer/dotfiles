@@ -30,7 +30,8 @@ set guifont=Liberation\ Mono\ 13
 "Copy/Cut/Paste"
 vmap <C-c> "+yi
 vmap <C-x> "+c
-vmap <C-v> c<ESC>"+
+vmap <C-v> c<ESC>"+p
+imap <C-v> <C-r><C-o>+"""
 
 "Key changes"
 inoremap <C-Z> <Esc>
