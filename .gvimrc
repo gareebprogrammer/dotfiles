@@ -31,7 +31,7 @@ set guifont=Liberation\ Mono\ 13
 vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
-imap <C-v> <C-r><C-o>+"""
+imap <C-v> <C-r><C-o>+
 
 "Key changes"
 inoremap <C-Z> <Esc>
