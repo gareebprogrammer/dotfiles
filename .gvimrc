@@ -24,7 +24,7 @@ set backspace=indent,eol,start	"Backspace behaviour
 set guioptions-=T
 
 "Setting gui font"
-set guifont=Liberation\ Mono\ 13
+set guifont=Roboto\ Mono\ 11
 
 
 "Copy/Cut/Paste"
