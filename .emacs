@@ -1,4 +1,3 @@
-
 (require 'package)
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                     (not (gnutls-available-p))))
@@ -58,7 +57,7 @@ Emacs is not supporting ssl"))
 )
 
 (when casey-linux
-  (setq casey-makescript "./build.linux")
+  (setq casey-makescript "./build.sh")
   (display-battery-mode 1)
 )
 
@@ -398,6 +397,24 @@ Emacs is not supporting ssl"))
   (forward-line -1)
 )
 
+(defun move-line-up ()
+  "Move up the current line."
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2)
+  (indent-according-to-mode))
+
+(defun move-line-down ()
+  "Move down the current line."
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1)
+  (indent-according-to-mode))
+
+
+(global-set-key [(control shift up)]  'move-line-up)
+(global-set-key [(control shift down)]  'move-line-down)
 (define-key global-map [C-right] 'forward-word)
 (define-key global-map [C-left] 'backward-word)
 (define-key global-map [C-up] 'previous-blank-line)
@@ -563,7 +580,9 @@ Emacs is not supporting ssl"))
  '(mouse-wheel-follow-mouse nil)
  '(mouse-wheel-progressive-speed nil)
  '(mouse-wheel-scroll-amount (quote (15)))
- '(package-selected-packages (quote (cyberpunk-2019-theme cyberpunk-theme)))
+ '(package-selected-packages
+   (quote
+    (indium rust-mode cyberpunk-2019-theme cyberpunk-theme)))
  '(version-control nil))
 
 (define-key global-map "\t" 'dabbrev-expand)
@@ -573,12 +592,15 @@ Emacs is not supporting ssl"))
 (define-key global-map [C-tab] 'indent-region)
 (define-key global-map "	" 'indent-region)
 
+;;Define plugin specific settings ;;
+(setq rust-format-on-save t)
+
 (defun casey-never-split-a-window
     "Never, ever split a window.  Why would anyone EVER want you to do that??"
     nil)
 (setq split-window-preferred-function 'casey-never-split-a-window)
 
-(add-to-list 'default-frame-alist '(font . "Liberation Mono-12.5"))
+(add-to-list 'default-frame-alist '(font . "Liberation Mono-11.5"))
 (set-face-attribute 'default t :font "Liberation Mono-11.5")
 
 (defun post-load-stuff ()
