@@ -30,6 +30,8 @@ Plug 'davidhalter/jedi-vim'
 "Rust plugin"
 Plug 'rust-lang/rust.vim'
 
+"Cmake support"
+Plug 'vhdirk/vim-cmake'
 
 call plug#end()
 
