@@ -62,7 +62,7 @@ There are two things you can do about this warning:
 (setq create-lockfiles nil)
 
 ;;Load theme
-(load-theme 'srcery t)
+(load-theme 'nimbus t)
 
 ;;Move line up
 (defun move-line-up ()
@@ -85,6 +85,10 @@ There are two things you can do about this warning:
 (global-set-key [(control shift up)]  'move-line-up)
 (global-set-key [(control shift down)]  'move-line-down)
 
+
+;;Set goto lines
+(global-set-key (kbd "C-c g") 'goto-line)
+
 ;;Set Note and Todo in color
 (setq fixme-modes '(c++-mode c-mode emacs-lisp-mode))
  (make-face 'font-lock-fixme-face)
@@ -97,15 +101,3 @@ There are two things you can do about this warning:
 	fixme-modes)
  (modify-face 'font-lock-fixme-face "Red" nil nil t nil t nil nil)
  (modify-face 'font-lock-note-face "Dark Green" nil nil t nil t nil nil)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (srcery-theme rust-mode js2-mode))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
