@@ -1,4 +1,3 @@
-
 "Plugin's
 call plug#begin('~/.vim/plugged')
 if has('nvim')
@@ -27,6 +26,9 @@ Plug 'stephpy/vim-yaml'
 
 "Auto close pair"
 Plug 'jiangmiao/auto-pairs'
+
+"Rip grep
+Plug 'jremmen/vim-ripgrep'
 
 "Json support"
 Plug 'leshill/vim-json'
@@ -61,7 +63,14 @@ let g:deoplete#enable_at_startup = 1
 "fzf call"
 nnoremap <silent> <C-f> :FZF<CR>
 
+"Ripgrep
+nnoremap <silent> <C-s> :Rg<CR>
+
+"Save file
+nnoremap <Leader>w :w<CR>
+
 "Editor Configs"
+set background=dark
 set number		"Show line numbers
 set linebreak		"Break lines at word (requires Wrap lines)
 set showbreak=+++	"Wrap-broken line prefix
