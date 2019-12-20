@@ -42,7 +42,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+"Setting color scheme
+Plug 'morhetz/gruvbox'
+
 call plug#end()
+
+"Setting colorscheme
+colorscheme gruvbox
 
 "Airline theme setup
 let g:airline_theme='angr'
@@ -69,6 +76,9 @@ nnoremap <silent> <C-s> :Rg<CR>
 "Save file
 nnoremap <Leader>w :w<CR>
 
+"Remove selected lines
+nnoremap <Leader><space> :noh<cr>
+
 "Editor Configs"
 set background=dark
 set number		"Show line numbers
@@ -87,3 +97,6 @@ set shiftwidth=4	"Number of auto-indent spaces
 set smartindent		"Enable smart-indent
 set smarttab		"Enable smart-tabs
 set softtabstop=4
+set mouse=a
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
