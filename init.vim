@@ -51,6 +51,9 @@ call plug#end()
 "Setting colorscheme
 colorscheme gruvbox
 
+"Start ale on save
+let g:ale_fix_on_save = 1
+
 "Airline theme setup
 let g:airline_theme='angr'
 
@@ -66,6 +69,9 @@ let g:go_fmt_fail_silently = 1
 
 "Autocomplete"
 let g:deoplete#enable_at_startup = 1
+
+"Start completion
+inoremap <silent><expr> <c-.> coc#refresh()
 
 "fzf call"
 nnoremap <silent> <C-f> :FZF<CR>
@@ -100,3 +106,59 @@ set softtabstop=4
 set mouse=a
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
+
+
+""""""""""""""""""""""""""""""""""""""""""
+"	    Keyboard shortcuts	         "
+""""""""""""""""""""""""""""""""""""""""""
+" Neat X clipboard integration
+" ,p will paste clipboard into buffer
+" ,c will copy entire buffer into clipboard
+noremap <leader>p :read !xsel --clipboard --output<cr>
+noremap <leader>c :w !xsel -ib<cr><cr>
+
+" Ctrl+c and Ctrl+j as Esc
+" https://github.com/neovim/neovim/issues/5916
+" So we also map Ctrl+k
+inoremap <C-j> <Esc>
+
+nnoremap <C-k> <Esc>
+inoremap <C-k> <Esc>
+vnoremap <C-k> <Esc>
+snoremap <C-k> <Esc>
+xnoremap <C-k> <Esc>
+cnoremap <C-k> <Esc>
+onoremap <C-k> <Esc>
+lnoremap <C-k> <Esc>
+tnoremap <C-k> <Esc>
+
+nnoremap <C-c> <Esc>
+inoremap <C-c> <Esc>
+vnoremap <C-c> <Esc>
+snoremap <C-c> <Esc>
+xnoremap <C-c> <Esc>
+cnoremap <C-c> <Esc>
+onoremap <C-c> <Esc>
+lnoremap <C-c> <Esc>
+tnoremap <C-c> <Esc>
+
+" No arrow keys --- force yourself to use the home row
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
+" Left and right can switch buffers
+nnoremap <left> :bp<CR>
+nnoremap <right> :bn<CR>
+" Move by line
+nnoremap j gj
+nnoremap k gk
+
+
+
+
+
+
