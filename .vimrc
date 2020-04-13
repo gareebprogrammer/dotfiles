@@ -1,13 +1,9 @@
 "Plugin's
 call plug#begin('~/.vim/plugged')
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+
+
+"Code completion"
+Plug 'ycm-core/YouCompleteMe'
 
 "Rust support"
 Plug 'rust-lang/rust.vim'
@@ -24,6 +20,12 @@ Plug 'cespare/vim-toml'
 "Yaml support"
 Plug 'stephpy/vim-yaml'
 
+"Javascript support
+Plug 'pangloss/vim-javascript'
+
+"VueJs cupport
+Plug 'posva/vim-vue'
+
 "Auto close pair"
 Plug 'jiangmiao/auto-pairs'
 
@@ -36,9 +38,6 @@ Plug 'leshill/vim-json'
 "Lint with ale"
 Plug 'w0rp/ale'
 
-"intellisense engine
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 "Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -49,7 +48,18 @@ Plug 'morhetz/gruvbox'
 call plug#end()
 
 "Setting colorscheme
+
+set background=dark
+"set background=light
+let g:gruvbox_contrast_light="hard"
+let g:gruvbox_contrast_dark="hard"
 colorscheme gruvbox
+
+
+let g:vue_pre_processors = []
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+let g:javascript_plugin_flow = 1
 
 "Start ale on save
 let g:ale_fix_on_save = 1
@@ -77,7 +87,7 @@ inoremap <silent><expr> <c-.> coc#refresh()
 nnoremap <silent> <C-f> :FZF<CR>
 
 "Ripgrep
-nnoremap <silent> <C-s> :Rg<CR>
+nnoremap <silent> <C-s> :Rg <space>
 
 "Save file
 nnoremap <Leader>w :w<CR>
@@ -142,23 +152,18 @@ onoremap <C-c> <Esc>
 lnoremap <C-c> <Esc>
 tnoremap <C-c> <Esc>
 
-" No arrow keys --- force yourself to use the home row
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
 
 " Left and right can switch buffers
-nnoremap <left> :bp<CR>
-nnoremap <right> :bn<CR>
+nnoremap <leader>o :bp<CR>
+nnoremap <leader>n :bn<CR>
+
 " Move by line
 nnoremap j gj
 nnoremap k gk
 
-
-
-
-
+" YCM
+" " The best part.
+nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
+nnoremap <silent> <Leader>gf :YcmCompleter FixIt<CR>"
+set completeopt-=preview
 
